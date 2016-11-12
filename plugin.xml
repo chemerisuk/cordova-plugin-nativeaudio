@@ -18,13 +18,12 @@
 	    <engine name="cordova" version=">=3.5" />
 	</engines>
 
-    <js-module src="www/nativeaudio.js" name="nativeaudio">
-        <clobbers target="window.plugins.NativeAudio"/>
-    </js-module>
-
     <!-- android -->
     <platform name="android">
-        
+        <js-module src="www/nativeaudio.js" name="nativeaudio">
+        	<clobbers target="window.plugins.NativeAudio"/>
+    	</js-module>
+	    
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="NativeAudio">
                 <param name="android-package" value="com.rjfun.cordova.plugin.nativeaudio.NativeAudio"/>
@@ -43,7 +42,7 @@
 
     </platform>
 
-    <!-- ios -->
+    <!-- ios --><!--
     <platform name="ios">
 
         <config-file target="config.xml" parent="/*">
@@ -62,6 +61,6 @@
         <header-file src="src/ios/NativeAudioAsset.h"/>
         <source-file src="src/ios/NativeAudioAsset.m"/>
 
-    </platform>
-
+    </platform>-->
+	
 </plugin>
